@@ -1,0 +1,96 @@
+//display
+@mixin d-none {
+    display: none;
+}
+
+//borders
+@mixin bred {
+    border: 1px solid red;
+}
+
+//margin and padding
+@mixin mp {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin mlr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@mixin mx {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//media
+@mixin from($min_width){
+    @media screen and (min-width: $min_width){
+        @content;
+    }
+}
+
+@mixin to($max_width){
+    @media screen and (max-width: $max_width){
+        @content;
+    }
+}
+
+@mixin from-to($min_width, $max_width){
+    @media screen and (min-width: $min_width) and (max-width: $max_width){
+        @content;
+    }
+}
+
+// разное
+@mixin clearfix{
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin placeholder($color, $opacity) {
+    &::placeholder {
+        color: $color;
+        opacity: $opacity;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+    }
+    &::-webkit-input-placeholder { // Chrome/Opera/Safari
+        color: $color;
+        opacity: $opacity;
+    }
+    &:-ms-input-placeholder { // IE 10+
+        color: $color;
+        opacity: $opacity;
+    }
+    &:-moz-placeholder { // Firefox 18-
+        color: $color;
+        opacity: $opacity;
+    }
+}
+
+// под вопросом!!!
+@mixin imgCenter($width, $min-height, $line-height, $font-size:0, $text-align:center){
+    width: $width;
+    min-height: $min-height;
+    text-align: $text-align;
+    font-size: $font-size;
+    line-height: $line-height;
+    img{
+        vertical-align: middle;
+        margin: 0;
+        max-height: 100%;
+    }
+    &:after{
+        content: ".";
+    }
+}
+
+/*------------------------------------------------------------------*/
+

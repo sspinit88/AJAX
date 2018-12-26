@@ -1,0 +1,91 @@
+@import "normalize.css";
+@import "fonts.scss";
+@import "project.scss";
+@import "mix.scss";
+@import "colors.scss";
+@import "spritePng.scss";
+//@import "smart-grid.scss";
+
+/*Общие стили*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    //overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    position: relative;
+}
+
+.wrap {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ears::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    //list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.d-none {
+    //.d-none();
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// smartgreed
+/*
+.wrapper{
+    @include wrapper();
+}
+*/
+
+/////////////////////////////////////////
+/*----*/
+/////////////////////////////////////////
+
